@@ -1,0 +1,25 @@
+site_name: Documentación Técnica | Urania
+site_description: Arquitectura de sistemas, agentes autónomos y blockchain.
+site_author: Urania Team
+
+theme:
+  name: material
+  palette:
+    # Modo oscuro por defecto para mantener la estética
+    scheme: slate
+    primary: cyan
+    accent: teal
+
+nav:
+  - Inicio: index.md
+  - Proyecto PERSONA:
+    - Arquitectura de Datos: persona/arquitectura/data_flux_logic.md
+  - Blockchain:
+    - Urania Smart Account: blockchain/urania_smart_account.md
+    - Urania EPublisher: blockchain/urania_epublisher.md
+    - Urania Token: blockchain/urania_token.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

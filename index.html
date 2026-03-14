@@ -134,8 +134,8 @@
             <div class="relative pt-[56.25%] bg-gray-900 rounded-2xl overflow-hidden border border-urania-cyan/30 shadow-2xl">
                 <iframe 
                     class="absolute inset-0 w-full h-full rounded-2xl" 
-                    src="https://www.youtube.com/embed/cb9zD4tYFXw?rel=0&showinfo=0" 
-                    title="Urania Intro Video" 
+                    src="https://www.youtube.com/embed/wYF89Rq5U9Q?rel=0&showinfo=0" 
+                    title="Urania Brand Intro" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
@@ -611,13 +611,13 @@
                         Urania actúa como un socio analítico de alta precisión diseñado para proteger y potenciar tu rentabilidad. Hablemos sobre tu próximo salto tecnológico.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-urania-cyan hover:border-urania-cyan transition-colors">
-                            <i class="fa-brands fa-github text-lg"></i>
+                        <a href="https://www.youtube.com/@urania.vision" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-urania-cyan hover:border-urania-cyan transition-colors">
+                            <i class="fa-brands fa-youtube text-lg"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-urania-cyan hover:border-urania-cyan transition-colors">
                             <i class="fa-brands fa-linkedin-in text-lg"></i>
                         </a>
-                        <a href="https://www.instagram.com/tu_usuario" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-urania-cyan hover:border-urania-cyan transition-colors">
+                        <a href="https://www.instagram.com/urania.vision" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-urania-cyan hover:border-urania-cyan transition-colors">
                             <i class="fa-brands fa-instagram text-lg"></i>
                         </a>
                     </div>
@@ -625,19 +625,22 @@
                 
                 <!-- Formulario Simple -->
                 <div class="bg-urania-card p-8 rounded-2xl border border-white/10">
-                    <form onsubmit="event.preventDefault(); alert('Formulario de contacto enviado (Simulación)');">
+                    <form action="https://formspree.io/f/mvzwqjbl" method="POST">
                         <div class="mb-4">
                             <label class="block text-sm font-medium text-slate-400 mb-1">Nombre Completo</label>
-                            <input type="text" class="w-full bg-urania-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-urania-cyan focus:ring-1 focus:ring-urania-cyan transition-colors" placeholder="Ej. Elon Musk" required>
+                            <input type="text" name="nombre" class="w-full bg-urania-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-urania-cyan focus:ring-1 focus:ring-urania-cyan transition-colors" placeholder="Ej. Elon Musk" required>
                         </div>
+                        
                         <div class="mb-4">
                             <label class="block text-sm font-medium text-slate-400 mb-1">Email Corporativo</label>
-                            <input type="email" class="w-full bg-urania-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-urania-cyan focus:ring-1 focus:ring-urania-cyan transition-colors" placeholder="email@empresa.com" required>
+                            <input type="email" name="email" class="w-full bg-urania-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-urania-cyan focus:ring-1 focus:ring-urania-cyan transition-colors" placeholder="email@empresa.com" required>
                         </div>
+                        
                         <div class="mb-6">
                             <label class="block text-sm font-medium text-slate-400 mb-1">¿Cómo podemos ayudarte?</label>
-                            <textarea rows="3" class="w-full bg-urania-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-urania-cyan focus:ring-1 focus:ring-urania-cyan transition-colors resize-none" placeholder="Breve descripción de tu desafío operativo..."></textarea>
+                            <textarea name="mensaje" rows="3" class="w-full bg-urania-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-urania-cyan focus:ring-1 focus:ring-urania-cyan transition-colors resize-none" placeholder="Breve descripción de tu desafío operativo..." required></textarea>
                         </div>
+                        
                         <button type="submit" class="w-full py-3 rounded-lg bg-urania-cyan text-urania-dark font-bold hover:bg-cyan-300 transition-colors shadow-[0_0_15px_rgba(34,211,238,0.3)]">
                             Iniciar Diagnóstico
                         </button>
@@ -650,8 +653,8 @@
                     &copy; 2026 Urania. Todos los derechos reservados.
                 </p>
                 <div class="flex gap-6 text-sm text-slate-500">
-                    <a href="#" class="hover:text-urania-cyan transition-colors">Aviso Legal</a>
-                    <a href="#" class="hover:text-urania-cyan transition-colors">Documentación Técnica</a>
+                    <a href="legal.html" class="hover:text-urania-cyan transition-colors">Aviso Legal</a>
+                    <a href="urania-docs/site/index.html" class="hover:text-urania-cyan transition-colors">Documentación Técnica</a>
                 </div>
             </div>
         </div>
