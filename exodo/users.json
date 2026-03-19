@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "id": "123", "name": "Juan Pérez", "x": 0.45, "y": 0.81, "color": "#22D3EE" },
+    { "id": "456", "name": "Martín Fernández", "x": 0.12, "y": 0.27, "color": "#FF00FF" },
+    { "id": "789", "name": "Pedro López", "x": 0.25, "y": 0.36, "color": "#FFF01F" }
+  ]
+}
