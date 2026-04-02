@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urania | Proyecto Éxodo - Boarding Map</title>
-    <!-- Tailwind CSS -->
+    <title>Urania | Portal Éxodo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -36,224 +33,157 @@
         }
     </script>
     <style>
-        body { margin: 0; overflow: hidden; background-color: #000000; }
-        .glass-panel {
-            background: rgba(11, 17, 32, 0.7);
+        .glass-nav {
+            background: rgba(11, 17, 32, 0.8);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-bottom: 1px solid rgba(34, 211, 238, 0.1);
         }
-        input[type=number]::-webkit-inner-spin-button, 
-        input[type=number]::-webkit-outer-spin-button { 
-            -webkit-appearance: none; 
-            margin: 0; 
+        .glow-text {
+            text-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
         }
+        .glow-box:hover {
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.15);
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.5s ease-out forwards; }
     </style>
 </head>
-<body class="text-slate-300 font-sans antialiased h-screen w-screen relative">
+<body class="bg-urania-dark text-slate-300 font-sans antialiased overflow-x-hidden">
 
-    <!-- Navegación y Buscador Superior -->
-    <div class="absolute top-0 w-full z-50 p-6 flex flex-col md:flex-row justify-between items-center gap-4 pointer-events-none">
-        <div class="pointer-events-auto cursor-pointer" onclick="window.location.href='index.html'">
-            <img src="Urania_Web06.png" alt="Urania Logo" class="h-10 w-auto object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]">
+    <nav class="fixed w-full z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='/'">
+                    <img src="../Urania_Web06.png" alt="Urania Logo" class="h-10 w-auto object-contain" onerror="this.src='https://via.placeholder.com/150x50?text=URANIA'">
+                </div>
+                <div class="flex space-x-8 items-center">
+                    <a href="../index.html" class="px-5 py-2 rounded-full bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white transition-all font-semibold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Urania
+                    </a>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="pointer-events-auto glass-panel rounded-full px-6 py-3 flex items-center shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all focus-within:shadow-[0_0_25px_rgba(34,211,238,0.3)] focus-within:border-urania-cyan/50">
-            <span class="text-urania-cyan font-mono font-semibold tracking-wider text-sm md:text-base mr-2">Boarding ID: URA-</span>
-            <form id="searchForm" class="flex items-center" onsubmit="event.preventDefault(); searchStar();">
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    class="bg-transparent text-white font-mono text-lg outline-none w-24 placeholder-slate-600 font-bold" 
-                    placeholder="000" 
-                    autocomplete="off"
-                    maxlength="5"
-                    disabled> <!-- Deshabilitado hasta que carguen los datos -->
-                <button type="submit" id="searchBtn" class="ml-3 text-slate-400 hover:text-urania-yellow transition-colors" disabled>
-                    <i class="fa-solid fa-satellite-dish"></i>
-                </button>
-            </form>
+    <section class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden flex items-center border-b border-white/5 bg-[url('../image_0.png')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-urania-dark via-urania-dark/95 to-urania-dark/80"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-urania-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>       
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left animate-fade-up">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono mb-6 uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span> Gamificación IA
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+                    Portal <span class="text-transparent bg-clip-text bg-gradient-to-r from-urania-cyan to-purple-500 glow-text">Éxodo</span>: Centro de Mando
+                </h1>
+                <p class="mt-4 max-w-2xl text-lg text-slate-400 leading-relaxed">
+                    Bienvenidos al hub de operaciones. Audita las métricas cognitivas, visualiza el censo global de estrellas y prepárate para el abordaje de la flota estelar de Urania.
+                </p>
+            </div>
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-sm md:max-w-md lg:max-w-none lg:w-[550px] lg:h-[300px]">
+                    <img src="Exodo.png" alt="Consola de Mando Éxodo" class="w-full h-auto lg:h-full object-cover rounded-2xl shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+                </div>
+            </div>
         </div>
-        
-        <div class="hidden md:block w-32"></div>
-    </div>
+    </section>
 
-    <!-- Lienzo del Mapa Estelar -->
-    <canvas id="starMap" class="absolute inset-0 w-full h-full cursor-crosshair"></canvas>
+    <section class="py-24 bg-urania-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-3xl font-bold text-white mb-12 tracking-tight">Herramientas del Manifiesto</h2>
 
-    <!-- Tooltip Emergente del Usuario -->
-    <div id="tooltip" class="absolute hidden px-5 py-4 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.4)] transform -translate-x-1/2 transition-all duration-300 z-40" style="background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(12px); border: 1px solid;">
-        <div id="arrow-down" class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 border-b border-r" style="background: #0B1120;"></div>
-        <div id="arrow-up" class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 border-t border-l hidden" style="background: #0B1120;"></div>
-        
-        <div class="relative z-10 text-center pointer-events-none">
-            <p class="text-xs font-mono text-urania-cyan tracking-widest uppercase mb-1" id="tt-id">URA-000</p>
-            <p class="text-xl font-bold text-white whitespace-nowrap" id="tt-name">Nombre Recluta</p>
-            <p class="text-[10px] text-slate-400 font-mono mt-2" id="tt-coords">x: 0.0000 | y: 0.0000</p>
-        </div>
-    </div>
+            <!-- TARJETA: Introducción al Juego -->
+            <div class="max-w-4xl mx-auto mb-6">
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-amber-500/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <div class="mb-6 flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20 text-amber-400 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-folder-open text-xl"></i>
+                            </div>
+                            <span class="text-xs font-mono text-slate-600 group-hover:text-amber-400 transition-colors">DOC_INIT_00</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Introducción al Juego</h4>
+                        
+                        <p class="text-slate-400 text-sm mb-6 transition-all duration-300">
+                            Accede al informe de campaña clasificado. Conoce el contexto operativo, las reglas de navegación y prepárate para el abordaje.
+                        </p>
 
-    <script>
-        const canvas = document.getElementById('starMap');
-        const ctx = canvas.getContext('2d');
-        const tooltip = document.getElementById('tooltip');
-        
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
-
-        // Variables globales
-        let users = [];
-        let targetUser = null;
-        let animationTime = 0;
-
-        // 1.0 es el tamaño original, 2.0 es el doble, etc.
-        const ESCALA_ESTRELLAS = 2.5;
-        //const ESCALA_ESTRELLAS = Math.max(1.0, 4.0 - (data.users.length / 150));
-
-        // --- INTEGRACIÓN CON BACKEND (FETCH) ---
-        async function loadUsers() {
-            try {
-                // Aquí llamamos a tu archivo o endpoint
-                const response = await fetch('users.json');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                
-                // Mapeamos los datos de la DB y les agregamos las propiedades visuales para el canvas
-                users = data.users.map(u => ({
-                    id: u.id,
-                    name: u.name,
-                    x: parseFloat(u.x), // Aseguramos que sea número
-                    y: parseFloat(u.y), // Aseguramos que sea número
-                    color: u.color,
-                    size: (Math.random() * 2 + 1) * ESCALA_ESTRELLAS,   // Tamaño aleatorio de la estrella
-                    phase: Math.random() * Math.PI * 2   // Fase para el parpadeo (twinkle)
-                }));
-
-                // Habilitar el buscador ahora que tenemos los datos
-                document.getElementById('searchInput').disabled = false;
-                document.getElementById('searchBtn').disabled = false;
-
-                // Iniciar la animación del mapa
-                drawMap();
-
-            } catch (error) {
-                console.error("Error al cargar la base de datos de reclutas:", error);
-                // Aquí podrías agregar lógica para mostrar un mensaje de error en pantalla
-            }
-        }
-
-        // --- RENDERIZADO DEL MAPA ---
-        function drawMap() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            animationTime += 0.1;
-
-            users.forEach(user => {
-                const px = user.x * canvas.width;
-                const py = user.y * canvas.height;
-                const isTarget = targetUser && targetUser.id === user.id;
-
-                let alpha = 0.5 + (Math.sin(animationTime + user.phase) * 0.2 + 0.2);
-                
-                if (isTarget) {
-                    const pulseRadius = 15 + Math.sin(animationTime * 4) * 5;
+                        <a href="./intro/index.html" class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-amber-500/10 border border-amber-500/50 text-amber-400 font-bold text-sm hover:bg-amber-500 hover:text-urania-dark transition-all shadow-[0_0_15px_rgba(245,158,11,0.1)] group-hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] group/btn">
+                            [ Iniciar Briefing ]
+                            <i class="fa-solid fa-play transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                     
-                    ctx.beginPath();
-                    ctx.arc(px, py, pulseRadius, 0, Math.PI * 2);
-                    ctx.fillStyle = user.color + '40';
-                    ctx.fill();
+                    <!-- Decoración lateral sutil (visible en desktop) -->
+                    <div class="hidden md:flex w-48 py-8 bg-black/20 rounded-xl border border-white/5 relative items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
+                         <div class="text-center">
+                            <i class="fa-solid fa-file-shield text-4xl text-amber-500/30 mb-3"></i>
+                            <div class="text-[10px] font-mono text-amber-500/50 tracking-widest uppercase">Clasificado</div>
+                         </div>
+                    </div>
+                </div>
+            </div>
 
-                    ctx.beginPath();
-                    ctx.arc(px, py, pulseRadius * 1.5, 0, Math.PI * 2);
-                    ctx.strokeStyle = user.color + '80';
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-
-                    alpha = 1;
-                }
-
-                ctx.beginPath();
-                ctx.arc(px, py, isTarget ? 3 : user.size, 0, Math.PI * 2);
-                ctx.fillStyle = user.color;
-                ctx.globalAlpha = alpha;
-                ctx.fill();
-                ctx.globalAlpha = 1.0;
-            });
-
-            requestAnimationFrame(drawMap);
-        }
-
-        // --- LÓGICA DE BÚSQUEDA ---
-        function searchStar() {
-            const inputVal = document.getElementById('searchInput').value.trim();
-            if(!inputVal) return;
-
-            const foundUser = users.find(u => u.id === inputVal);
-
-            if (foundUser) {
-                targetUser = foundUser;
-                const px = foundUser.x * canvas.width;
-                const py = foundUser.y * canvas.height;
-
-                document.getElementById('tt-id').innerText = `URA-${foundUser.id}`;
-                document.getElementById('tt-name').innerText = foundUser.name;
-                document.getElementById('tt-coords').innerText = `x: ${foundUser.x.toFixed(4)} | y: ${foundUser.y.toFixed(4)}`;
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
                 
-                tooltip.style.borderColor = foundUser.color;
-                tooltip.style.boxShadow = `0 0 20px ${foundUser.color}40`;
-                document.getElementById('arrow-down').style.borderColor = foundUser.color;
-                document.getElementById('arrow-up').style.borderColor = foundUser.color;
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-urania-cyan/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-brain text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-urania-cyan transition-colors">VAR_01</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Diccionario Argos</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-6 transition-all duration-300">
+                        Descifra tu Boarding Pass. Entiende las 5 dimensiones cognitivas que evaluó el algoritmo de navegación.
+                    </p>
 
-                const isNearTop = py < 120;
+                    <a href="./diccionario_argos/index.html" class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-urania-cyan text-urania-dark font-bold text-sm hover:bg-cyan-300 transition-all shadow-[0_0_15px_rgba(34,211,238,0.3)] group/btn">
+                        [ Consultar Diccionario ]
+                        <i class="fa-solid fa-code-branch transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
 
-                if (isNearTop) {
-                    tooltip.style.top = `${py + 25}px`;
-                    tooltip.classList.remove('-translate-y-full', 'mt-[-20px]');
-                    tooltip.classList.add('translate-y-0');
-                    document.getElementById('arrow-down').classList.add('hidden');
-                    document.getElementById('arrow-up').classList.remove('hidden');
-                } else {
-                    tooltip.style.top = `${py - 15}px`;
-                    tooltip.classList.remove('translate-y-0');
-                    tooltip.classList.add('-translate-y-full', 'mt-[-20px]');
-                    document.getElementById('arrow-down').classList.remove('hidden');
-                    document.getElementById('arrow-up').classList.add('hidden');
-                }
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-satellite-dish text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-purple-400 transition-colors">VAR_02</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Mapa Celestial (Censo Global)</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-6 transition-all duration-300">
+                        Visualiza la flota completa. Cada participante ha sido representado como una estrella en el cielo nocturno.
+                    </p>
 
-                tooltip.style.left = `${px}px`;
-                tooltip.classList.remove('hidden');
-                setTimeout(() => tooltip.classList.add('opacity-100'), 10);
-            } else {
-                targetUser = null;
-                tooltip.classList.add('hidden');
-                tooltip.classList.remove('opacity-100');
-                
-                const inputEl = document.getElementById('searchInput');
-                inputEl.classList.add('text-red-500');
-                setTimeout(() => inputEl.classList.remove('text-red-500'), 800);
-            }
-        }
+                    <a href="./mapa_celeste/index.html" class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-purple-500 text-white font-bold text-sm hover:bg-purple-400 transition-all shadow-[0_0_15px_rgba(192,132,252,0.3)] group/btn">
+                        [ Ver Mapa ]
+                        <i class="fa-solid fa-globe transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
 
-        // --- CERRAR CARTELITO ---
-        canvas.addEventListener('click', () => {
-            if(targetUser) {
-                targetUser = null;
-                tooltip.classList.add('hidden');
-                tooltip.classList.remove('opacity-100');
-                document.getElementById('searchInput').value = '';
-            }
-        });
+            </div>
+            
+            <div id="exodo-escalable" class="exodo-escalable"></div>
+            
+            <p class="text-center text-xs font-mono text-slate-500 mt-10"><i class="fa-solid fa-circle-info mr-1"></i> Pasa el cursor sobre las tarjetas para descubrir la aplicación práctica de cada métrica.</p>
+        </div>
+    </section>
 
-        // --- INICIALIZAR ---
-        // Llamamos a la función asincrónica al cargar el script
-        loadUsers();
+    <footer class="bg-[#05080f] py-8 border-t border-urania-cyan/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-slate-500 font-mono">
+                SISTEMA COSMO+ARGOS &copy; 2026 Urania. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
 
-    </script>
 </body>
 </html>

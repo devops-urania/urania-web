@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urania | Proyecto Éxodo - Métricas Argos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    },
+                    colors: {
+                        urania: {
+                            dark: '#0B1120',
+                            card: '#111827',
+                            cyan: '#22D3EE',
+                            turq: '#0D9488',
+                            yellow: '#FDF0B5',
+                            yellowHover: '#FCE694'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(11, 17, 32, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+        }
+        .glow-box:hover {
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.15);
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.5s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-urania-dark text-slate-300 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='/'">
+                    <img src="../../Urania_Web06.png" alt="Urania Logo" class="h-10 w-auto object-contain" onerror="this.src='https://via.placeholder.com/150x50?text=URANIA'">
+                </div>
+                <div class="flex space-x-8 items-center">
+                    <a href="../index.html" class="px-5 py-2 rounded-full bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white transition-all font-semibold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Volver al portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden flex items-center border-b border-white/5">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-urania-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>       
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-fade-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-urania-turq/10 border border-urania-turq/30 text-urania-turq text-xs font-mono mb-6 uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-urania-turq animate-pulse"></span> Documentación Pública
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Diccionario <span class="text-transparent bg-clip-text bg-gradient-to-r from-urania-cyan to-blue-500 glow-text">Argos</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-400 leading-relaxed">
+                Si recibiste tu Boarding Pass para el <strong>Proyecto Éxodo</strong>, nuestro Director de Navegación evaluó tu perfil en cinco dimensiones cognitivas. Descubrí qué significa cada métrica de tu gráfico radial.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-urania-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-urania-cyan/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-code-branch text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-urania-cyan transition-colors">VAR_01</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Lógica Algorítmica</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-4 group-hover:hidden transition-all duration-300">
+                        Capacidad de desglosar un problema complejo en pasos secuenciales, claros y ordenados.
+                    </p>
+
+                    <div class="hidden group-hover:block transition-all duration-500 animate-fade-up">
+                        <div class="mb-4">
+                            <span class="block text-xs font-mono text-urania-yellow mb-2">EN LA PRÁCTICA</span>
+                            <p class="text-sm text-slate-300">Mide tu pensamiento causa-efecto. Un puntaje alto indica una mente estructurada, ideal para optimizar recursos o crear planes donde cada paso depende del anterior. Es ver el mundo como un código: <em>"si ocurre A, se ejecuta B"</em>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-shuffle text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-purple-400 transition-colors">VAR_02</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Pensamiento Lateral</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-4 group-hover:hidden transition-all duration-300">
+                        Habilidad para abordar los obstáculos desde ángulos inesperados, rompiendo patrones de deducción tradicionales.
+                    </p>
+
+                    <div class="hidden group-hover:block transition-all duration-500 animate-fade-up">
+                        <div class="mb-4">
+                            <span class="block text-xs font-mono text-urania-yellow mb-2">EN LA PRÁCTICA</span>
+                            <p class="text-sm text-slate-300">Pura creatividad resolutiva. Quienes destacan aquí no chocan contra la misma pared; inventan una puerta. Es vital para salir de callejones sin salida cuando el manual de instrucciones ya no sirve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-emerald-500/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-sliders text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-emerald-400 transition-colors">VAR_03</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Adaptabilidad Heurística</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-4 group-hover:hidden transition-all duration-300">
+                        Destreza para ajustar estrategias sobre la marcha, usando atajos mentales e intuición frente a nueva información.
+                    </p>
+
+                    <div class="hidden group-hover:block transition-all duration-500 animate-fade-up">
+                        <div class="mb-4">
+                            <span class="block text-xs font-mono text-urania-yellow mb-2">EN LA PRÁCTICA</span>
+                            <p class="text-sm text-slate-300">Es la capacidad de "aprender haciendo" y corregir el rumbo rápidamente. Refleja a alguien que no se paraliza si el plan falla, sino que improvisa soluciones en el momento con las herramientas que tiene a mano.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center border border-orange-500/20 text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-anchor text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-orange-400 transition-colors">VAR_04</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Tolerancia a la Incertidumbre</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-4 group-hover:hidden transition-all duration-300">
+                        Fortaleza mental para operar y tomar decisiones en escenarios donde faltan datos o el entorno es caótico.
+                    </p>
+
+                    <div class="hidden group-hover:block transition-all duration-500 animate-fade-up">
+                        <div class="mb-4">
+                            <span class="block text-xs font-mono text-urania-yellow mb-2">EN LA PRÁCTICA</span>
+                            <p class="text-sm text-slate-300">Resiliencia pura ante lo desconocido. En una crisis, estas personas funcionan como un ancla. No necesitan tener todas las variables controladas ni garantías de éxito para dar el siguiente paso con firmeza.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-urania-card border border-white/10 rounded-2xl p-8 hover:border-urania-cyan/50 transition-all duration-500 glow-box cursor-pointer overflow-hidden flex flex-col h-full">
+                    <div class="mb-6 flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-urania-cyan/10 flex items-center justify-center border border-urania-cyan/20 text-urania-cyan group-hover:bg-urania-cyan group-hover:text-urania-dark transition-colors">
+                            <i class="fa-solid fa-globe text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono text-slate-600 group-hover:text-urania-cyan transition-colors">VAR_05</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Visión Sistémica</h4>
+                    
+                    <p class="text-slate-400 text-sm mb-4 group-hover:hidden transition-all duration-300">
+                        Facilidad para ver "el bosque en lugar del árbol". Comprender cómo interactúan las distintas partes de un ecosistema.
+                    </p>
+
+                    <div class="hidden group-hover:block transition-all duration-500 animate-fade-up">
+                        <div class="mb-4">
+                            <span class="block text-xs font-mono text-urania-yellow mb-2">EN LA PRÁCTICA</span>
+                            <p class="text-sm text-slate-300">Pensamiento estratégico a gran escala. Alguien con esta visión anticipa consecuencias a largo plazo; entiende que mover una sola pieza hoy generará un efecto dominó que transformará todo el tablero mañana.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p class="text-center text-xs font-mono text-slate-500 mt-10"><i class="fa-solid fa-circle-info mr-1"></i> Pasa el cursor sobre las tarjetas para descubrir la aplicación práctica de cada métrica.</p>
+        </div>
+    </section>
+
+    <footer class="bg-[#05080f] py-8 border-t border-urania-cyan/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-slate-500 font-mono">
+                SISTEMA COSMO+ARGOS &copy; 2026 Urania. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

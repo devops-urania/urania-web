@@ -73,6 +73,7 @@
                     <a href="#ejes" class="text-sm font-medium hover:text-urania-cyan transition-colors">Tecnología</a>
                     <a href="#metodo" class="text-sm font-medium hover:text-urania-cyan transition-colors">Método</a>
                     <a href="#persona" class="text-sm font-medium hover:text-urania-cyan transition-colors">PERSONA</a>
+                    <a href="#exodo" class="text-sm font-medium hover:text-white transition-colors">ÉXODO</a>
                     <a href="#casos" class="text-sm font-medium hover:text-urania-cyan transition-colors">Casos</a>
                     <a href="#equipo" class="text-sm font-medium hover:text-urania-cyan transition-colors">Equipo</a>
                     <a href="#contacto" class="px-5 py-2 rounded-full bg-urania-cyan/10 text-urania-cyan border border-urania-cyan/30 hover:bg-urania-cyan hover:text-urania-dark transition-all font-semibold text-sm">Contactar</a>
@@ -92,6 +93,7 @@
                 <a href="#ejes" class="block px-3 py-2 text-base font-medium hover:text-urania-cyan">Tecnología</a>
                 <a href="#metodo" class="block px-3 py-2 text-base font-medium hover:text-urania-cyan">Método</a>
                 <a href="#persona" class="block px-3 py-2 text-base font-medium hover:text-urania-cyan">PERSONA</a>
+                <a href="#exodo" class="block px-3 py-2 text-base font-medium hover:text-urania-cyan">EXODO</a>
                 <a href="#equipo" class="block px-3 py-2 text-base font-medium hover:text-urania-cyan">Equipo</a>
             </div>
         </div>
@@ -419,13 +421,16 @@
     </section>
 
     <!-- 5. Proyecto PERSONA -->
-   <section id="persona" class="py-24 relative overflow-hidden">
+    <section id="persona" class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#062430] to-[#0B1120] z-0"></div>
         <div class="absolute right-0 bottom-0 w-[500px] h-[500px] bg-urania-cyan/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-black/40 backdrop-blur-xl border border-urania-cyan/20 rounded-3xl p-8 md:p-16 shadow-2xl">
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div class="bg-black/40 backdrop-blur-xl border border-urania-cyan/20 rounded-3xl p-8 md:p-16 shadow-2xl relative overflow-hidden group">
+                
+                <div class="absolute inset-0 bg-gradient-to-r from-urania-cyan/0 via-urania-cyan/5 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center relative z-10">
                     <div class="lg:col-span-3">
                         <div class="flex flex-wrap items-center gap-3 mb-4">
                             <div class="inline-block px-3 py-1 rounded-full bg-urania-yellow/10 border border-urania-yellow/30 text-urania-yellow text-xs font-mono">
@@ -473,10 +478,75 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> </div>
         </div>
     </section>
+
+        <!-- 5.5 Protocolo Éxodo (Experiencia Interactiva) -->
+        <section id="exodo" class="py-24 relative overflow-hidden border-y border-urania-cyan/20">
+            <!-- Fondo inmersivo espacial -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2048&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-urania-dark via-urania-dark/90 to-urania-dark/95"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl overflow-hidden relative group">
+                    <!-- Brillo de fondo en hover -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-urania-cyan/0 via-urania-cyan/5 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                        <div class="flex flex-wrap items-center gap-3 mb-4">
+                            <div class="inline-block px-3 py-1 rounded-full bg-urania-yellow/10 border border-urania-yellow/30 text-urania-yellow text-xs font-mono">
+                                EXPERIMENTO SOCIAL
+                            </div>
+                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono">
+                                GAMIFICACIÓN IA
+                            </div>
+                            <h3 class="text-3xl md:text-5xl font-bold text-white mb-6 mt-2">Protocolo <span class="text-urania-cyan">Éxodo</span></h3>
+                            <p class="text-slate-400 mb-8 leading-relaxed">
+                                En Urania creemos que la mejor forma de vender tecnología es demostrando su potencia. Protocolo Éxodo es una campaña de despliegue masivo que expone nuestro potencial técnico mediante una <strong>experiencia de gamificación avanzada</strong>.
+                            </p>
+                            <p class="text-slate-400 mb-8 leading-relaxed">
+                                 Construido íntegramente con los agentes de IA y protocolos de datos que promovemos, este proyecto sirve como testimonio de nuestra capacidad para orquestar sistemas de información complejos y automatizados. <strong>No solo decimos que podemos hacerlo; ya lo estamos operando</strong>. 
+                            </p>
+                            
+                            <!-- Botón de redirección a /exodo -->
+                            <a href="./exodo/index.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-urania-cyan text-urania-dark font-bold text-lg hover:bg-cyan-300 transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] group/btn">
+                                Acceder al Portal Éxodo
+                                <i class="fa-solid fa-rocket transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Gráfico ilustrativo animado a la derecha -->
+                        <div class="relative flex justify-center lg:justify-end lg:-translate-x-16">
+                            <div class="relative w-64 h-64 md:w-80 md:h-80">
+                                
+                                <div class="absolute inset-0 border border-urania-cyan/20 rounded-full"></div>
+                                <div class="absolute inset-8 border border-dashed border-purple-500/30 rounded-full"></div>
+                                <div class="absolute inset-16 border border-urania-cyan/10 rounded-full"></div>
+                                
+                                <div class="absolute inset-0 m-auto w-24 h-24 bg-gradient-to-tr from-urania-cyan to-purple-600 rounded-full blur-md opacity-40 animate-pulse"></div>
+                                <div class="absolute inset-0 m-auto w-20 h-20 bg-urania-dark border-2 border-urania-cyan rounded-full flex items-center justify-center z-10 shadow-[0_0_30px_rgba(34,211,238,0.4)]">
+                                    <i class="fa-solid fa-satellite text-3xl text-white"></i>
+                                </div>
+                                
+                                <div class="absolute inset-0 animate-[spin_20s_linear_infinite]">
+                                    <div class="absolute top-0 left-1/2 w-4 h-4 bg-purple-400 rounded-full shadow-[0_0_10px_#c084fc] -translate-x-1/2 -translate-y-1/2"></div>
+                                </div>
+
+                                <div class="absolute inset-8 animate-[spin_15s_linear_infinite_reverse]">
+                                    <div class="absolute top-1/2 right-0 w-3 h-3 bg-urania-cyan rounded-full shadow-[0_0_10px_#22d3ee] translate-x-1/2 -translate-y-1/2"></div>
+                                </div>
+
+                                <div class="absolute inset-16 animate-[spin_10s_linear_infinite]">
+                                    <div class="absolute top-1/2 left-0 w-2 h-2 bg-urania-yellow rounded-full shadow-[0_0_10px_#FDF0B5] -translate-x-1/2 -translate-y-1/2"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- 6. Casos de Transformación (Proof of Work) -->
     <section id="casos" class="py-24 bg-urania-card relative border-y border-white/5">
@@ -555,13 +625,13 @@
                     <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-2 border-white/10 group-hover:border-urania-cyan transition-colors mb-6 grayscale group-hover:grayscale-0 relative">
                         <img src="Franco.jpeg" alt="Franco" class="w-full h-full object-cover object-[center_top]">
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-1">Lic. Franco Manini</h4>
+                    <h4 class="text-2xl font-bold text-white mb-1">Dr. Franco Manini</h4>
                     <p class="text-urania-cyan text-sm font-mono mb-4">Física Solar y Modelado Predictivo</p>
                     <p class="text-slate-400 text-sm px-4">
                          Especialista en la interacción Sol-Tierra y machine learning. Investiga eyecciones de masa coronal. Colabora con la NASA. Aplica modelos de aprendizaje automático para potenciar la eficiencia y el rendimiento de parques de energía solar.
                     </p>
                     <div class="flex justify-center mt-6">
-                        <a href="URL_LINKEDIN_FRANCO" target="_blank" class="flex items-center gap-2 text-slate-500 hover:text-urania-cyan transition-all duration-300">
+                        <a href="https://www.linkedin.com/in/franco-manini" target="_blank" class="flex items-center gap-2 text-slate-500 hover:text-urania-cyan transition-all duration-300">
                             <i class="fa-brands fa-linkedin-in text-xl"></i>
                             <span class="text-[10px] font-mono uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">Perfil</span>
                         </a>
@@ -570,7 +640,7 @@
 
                 <div class="text-center group">
                     <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-2 border-white/10 group-hover:border-urania-cyan transition-colors mb-6 grayscale group-hover:grayscale-0 relative">
-                        <img src="Matias.jpeg" alt="Matias" class="w-full h-full object-cover object-[center_top_10%]">
+                        <img src="Matias.jpeg" alt="Matias" class="w-full h-full object-cover object-[center_top]">
                     </div>
                     <h4 class="text-2xl font-bold text-white mb-1">Dr. Matías Vera-Rueda</h4>
                     <p class="text-urania-cyan text-sm font-mono mb-4">Astrofísica Computacional e Ingeniería de IA</p>
@@ -587,9 +657,9 @@
 
                 <div class="text-center group">
                     <div class="w-40 h-40 mx-auto rounded-full overflow-hidden border-2 border-white/10 group-hover:border-urania-cyan transition-colors mb-6 grayscale group-hover:grayscale-0 relative">
-                        <img src="Julia.jpeg" alt="Julia" class="w-full h-full object-cover object-[center_top_10%]">
+                        <img src="Julia.jpeg" alt="Julia" class="w-full h-full object-cover object-[center_top]">
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-1">Lic. Julia Fernández</h4>
+                    <h4 class="text-2xl font-bold text-white mb-1">Dra. Julia Fernández</h4>
                     <p class="text-urania-cyan text-sm font-mono mb-4">Big Data y Simulación Cosmológica</p>
                     <p class="text-slate-400 text-sm px-4">
                         Experta en evolución galáctica y aprendizaje automático. Lidera el análisis de datos masivos mediante simulaciones y técnicas de IA para identificar patrones complejos y extraer conocimiento a gran escala.
@@ -736,3 +806,4 @@
     </script>
 </body>
 </html>
+

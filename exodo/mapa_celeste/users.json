@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "6257373",
+      "name": "Matías Vera",
+      "x": 0.42,
+      "y": 0.16,
+      "color": "#02f5c4",
+      "emoji": "🧠"
+    },
+    {
+      "id": "5826429",
+      "name": "Julia Fernández",
+      "x": 0.86,
+      "y": 0.17,
+      "color": "#FF3131",
+      "emoji": "⚙️"
+    },
+    {
+      "id": "4897674",
+      "name": "Franco Manini",
+      "x": 0.5,
+      "y": 0.14,
+      "color": "#02f5c4",
+      "emoji": "⚙️"
+    }
+  ]
+}
